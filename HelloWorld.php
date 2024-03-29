@@ -161,4 +161,32 @@ $y = 10;
 echo ($x <=> $y); // returns 1 because $x is greater than $y
 
 // ? PHP also offers <> as 'loose not equal' as well as !=
+
+// ! Date
+// The date() function formats a timestamp to a readable date and time
+// date(format, timestamp)
+
+// ? Common characters used for dates
+// d - Represents the day of the month (01 to 31)
+// m - Represents a month (01 to 12)
+// Y - Represents a year (in four digits)
+// l (lowercase 'L') - Represents the day of the week
+
+echo "Today is " . date("Y/m/d") . "<br>";
+echo "Today is " . date("Y.m.d") . "<br>";
+echo "Today is " . date("Y-m-d") . "<br>";
+echo "Today is " . date("l");
+
+// ? Common characters used for times
+// H - 24-hour format of an hour (00 to 23)
+// h - 12-hour format of an hour with leading zeros (01 to 12)
+// i - Minutes with leading zeros (00 to 59)
+// s - Seconds with leading zeros (00 to 59)
+// a - Lowercase Ante meridiem and Post meridiem (am or pm)
+
+echo "The time is " . date("h:i:sa");
+
+// To get YOUR timezone, use this function to set it
+date_default_timezone_set("America/New_York");
+echo "The time is " .date("h:i:sa");
 ?>
