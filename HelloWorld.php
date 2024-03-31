@@ -189,4 +189,49 @@ echo "The time is " . date("h:i:sa");
 // To get YOUR timezone, use this function to set it
 date_default_timezone_set("America/New_York");
 echo "The time is " .date("h:i:sa");
+
+// ! Arrays
+
+// PHP arrays are created with the 'array' keyword, and has specific built-in array functions
+$cars = array("Volvo", "BMW", "Toyota");
+// Or simply create an empty array and add items to it later
+$empty_array = [];
+
+// Return how many items are in the array with count()
+echo count($cars); // 3
+
+// Similar to JS, with indexed arrays you can access an array item by index number
+echo $cars[0];
+
+// You can also change the value of an array item this way:
+$cars[1] = "Chevy";
+var_dump($cars);
+
+// You can loop through an array, printing all the values with a foreach loop
+$cars = array("Volvo", "BMW", "Toyota");
+foreach ($cars as $car) {
+    echo "$car <br>";
+}
+
+// You can push things to the end of an array with array_push()
+array_push($cars, "Mitsubishi");
+var_dump($cars);
+
+// A PHP associative array uses named keys that you assign them
+$car = array("brand" => "Ford", "model" => "Mustang", "year" => 1964);
+var_dump($car);
+
+// You can access an array item by refering to key name
+echo $car["model"];
+
+// You can also change the value using the key name
+$car["year"] = 2024;
+echo $car["year"];
+
+// To loop through this kind of array, it looks like this:
+$car = array("brand" => "Ford", "model" => "Mustang", "year" => 1964);
+
+foreach ($car as $x => $y) {
+    echo "$x: $y <br>";
+}
 ?>
