@@ -234,4 +234,18 @@ $car = array("brand" => "Ford", "model" => "Mustang", "year" => 1964);
 foreach ($car as $x => $y) {
     echo "$x: $y <br>";
 }
+
+// Remove the last item of an array with array_pop()
+array_pop($cars);
+
+// Remove the first item of an array with array_shift()
+array_shift($cars);
+
+// ? Array sort functions
+// sort() - sort arrays in ascending order
+// rsort() - sort arrays in descending order
+// asort() - sort associative arrays in ascending order, according to the value
+// ksort() - sort associative arrays in ascending order, according to the key
+// arsort() - sort associative arrays in descending order, according to the value
+// krsort() - sort associative arrays in descending order, according to the key
 ?>
